@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Resume download functionality
 document.getElementById('download-resume').addEventListener('click', function() {
-    window.location.href = 'path/to/your-resume.pdf'; // Replace with actual path
+    window.location.href = 'Hemanth_Bysani_01.pdf'; // Replace with actual path
 });
 
 // Initialize AOS animations
