@@ -2,63 +2,214 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemanth Bysani's Resume</title>
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <title>Hemanth Bysani | Developer & Innovator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="parallax-background"></div> <!-- Parallax background div -->
-        <h1>Hemanth Bysani</h1>
-        <p>Location: Bangalore, Karnataka, India</p>
-        <p>Email: hemanthbysani2002@gmail.com | Mobile: +91 8618107187</p>
-        <p><a href="https://www.linkedin.com/in/hemanth-bysani/">LinkedIn</a> | <a href="https://github.com/Hemanthbysani">GitHub</a></p>
+    <!-- Preloader Overlay -->
+    <div id="preloader-overlay">
+        <div class="greetings">
+            <span class="greeting">Hello</span>
+            <span class="greeting">नमस्ते</span>
+            <span class="greeting">Hola</span>
+            <span class="greeting">Bonjour</span>
+            <span class="greeting">こんにちは</span>
+            <span class="greeting">Hallo</span>
+        </div>
+    </div>
+
+    <header class="hero">
+        <button id="scroll-down-btn" style="display:none;">
+            Scroll Down <span class="arrow">&#8595;</span>
+        </button>
+        <div class="hero-content">
+            <h1 data-aos="fade-down">Hemanth Bysani</h1>
+            <p class="tagline" data-aos="fade-up" data-aos-delay="200">Software Engineer | Innovator | Problem Solver</p>
+            <p class="location-contact" data-aos="fade-up" data-aos-delay="300">
+                Bangalore, Karnataka, India <br>
+                <a href="mailto:hemanthbysani2002@gmail.com">hemanthbysani2002@gmail.com<br>
+                <a href="https://www.linkedin.com/in/hemanth-bysani/" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/Hemanthbysani" target="_blank">GitHub</a>
+            </p>
+        </div>
     </header>
 
-    
-    <section id="education">
-        <h2>Education</h2>
-        <p>Bachelor of Technology in Computer Science and Engineering, Amrita School of Engineering, Expected Graduation: May 2024</p>
-        <p>Intermediate (+2), Narayana CO Kaveri Bhavan, May 2018 - May 2020</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills Summary</h2>
+    <nav class="main-nav">
         <ul>
-            <li>Programming Languages: C, C++, Python, Java</li>
-            <li>Web Technologies: HTML, CSS, JavaScript, ReactJS, Node.js</li>
-            <li>Tools: Git, Docker, Kubernetes, Jenkins</li>
-            <!-- Additional skills here -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <p>Intern, General Electric, June 2023 - Present</p>
-        <p>Intern, Northern Trust, Dec 2021 - May 2022</p>
-        <p>Intern, Wipro, June 2021 - Nov 2021</p>
-    </section>
+    <main>
+        <section id="about" data-aos="fade-left">
+            <h2>About Me</h2>
+            <p>A highly motivated and detail-oriented Software Engineer (Graduated: August 2024, Amrita School of Engineering) with a passion for leveraging technology to solve real-world problems. Experienced in full-stack development, machine learning, and cloud technologies. Proven ability to learn quickly and collaborate effectively in fast-paced environments.</p>
+            <h3>Education</h3>
+            <ul>
+                <li>Bachelor of Technology in Computer Science and Engineering, Amrita School of Engineering (Graduated: August 2024)</li>
+                <li>Intermediate (+2), Narayana CO Kaveri Bhavan (May 2018 - May 2020)</li>
+            </ul>
+            <h3>Leadership Experience</h3>
+            <ul>
+                <li>Harvard ACONF24 Delegate</li>
+                <li>FACE Vice President</li>
+                <li>GeeksForGeeks Chapter Lead</li>
+            </ul>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Pneumonia Detection from Chest X-Rays using Deep Learning</p>
-        <p>Sustainable Development Goals (SDGs) Research</p>
-        <p>Extractive Text Summarization</p>
-    </section>
+        <section id="skills" data-aos="fade-right">
+            <h2>Skills Summary</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
+                    <h4>ML/DL & Data</h4>
+                    <p>Tensorflow, Keras, PyTorch, OpenCV, Pandas, Ollama, LlamaIndex, LangChain (Used at PayPal &GE Aerospace)</p>
+                </div>
+                <div class="skill-category" data-aos="zoom-in">
+                    <h4>Programming Languages</h4>
+                    <p>C, C++, Python, Java, JavaScript</p>
+                </div>
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
+                    <h4>Web Technologies</h4>
+                    <p>HTML, CSS, JavaScript, ReactJS, Node.js</p>
+                </div>
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
+                    <h4>Backend & Enterprise</h4>
+                    <p>SpringBoot, Maven, Marklogic, JIRA, MYSQL, Postman, Selenium (Used at PayPal, Northern Trust)</p>
+                </div>
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="400">
+                    <h4>DevOps & Tools</h4>
+                    <p>Git, Docker, Kubernetes, Jenkins (Used at PayPal, Northern Trust)</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="achievements">
-        <h2>Notable Achievements</h2>
-        <ul>
-            <li>Winner of XYZ Coding Challenge</li>
-            <li>Active participant in various Hackathons</li>
-            <!-- Additional achievements here -->
-        </ul>
-    </section>
+        <section id="experience" data-aos="fade-right">
+            <h2>Experience</h2>
+            <div class="experience-item" data-aos="fade-up">
+                <h3>SDE-1, PayPal</h3>
+                <p class="experience-duration">October 2024 - Present</p>
+                <p>GenAI Engineer in Solutions Engineering Team.
+                <ul>
+                    <li>Spearheading the latest GenAI capabilities at PayPal enabling developers and customers fully utilize the potential of smart Agentic LLMs.</li>
+                    <li>Prototyped demo for Org wide showcase at All Hands meeting for the future of AI Native development.</li>
+                    <li>Built RAG for internal PayPal codebases to be used with open source tools, Accelerating developer output at PayPal by performing meaningful automations such as E2E testing, Auto code generation and review, etc.</li>
+                    <li>Performed Java 8 to Java 17 end to end migration on billing service crucial to PayPal's subscription model, decreased latency by 15% and reduced GC overhead by 5x helping throughput improvements and improving capability of billing service that handles 700 Million requests per week.</li>
+                </ul>
+            </div>
+            <div class="experience-item" data-aos="fade-up">
+                <h3>Intern, General Electric</h3>
+                <p class="experience-duration">January 2024 - June 2024</p>
+                <ul>
+                    <li>Contributed to the LEAP-Image Analytics team, achieving exceptional accuracy in segmentation-based models for the IA workflow, surpassing 92% in F1-Scores and Precision metrics.</li>
+                    <li>Developed a state-of-the-art classifier model that achieved a 94.4% F1 Score on the validation set, leading to its integration into the ABM workflow.</li>
+                    <li>Devised an innovative method for precise quantification of crack detection in aircraft blades, reducing Turn Around Time (TAT) and lowering False Positive/False Negative rates in stress detection models.</li>
+                </ul>
+            </div>
+            <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+                <h3>Intern, Northern Trust</h3>
+                <p class="experience-duration">June 2023 - September 2023</p>
+                <ul>
+                    <li>Developed a dashboard component that significantly reduced the turnaround time for retrieving legacy transactions from over five days to less than fifteen seconds, enhancing the productivity of the Technical Account Manager (TAM).</li>
+                    <li>Implemented a robust search logic based on specific requirements, focusing on minimizing search latency, improving reliability, and ensuring the security of the dashboard.</li>
+                    <li>Achieved comprehensive test coverage for production deployment on company servers in the fourth quarter of 2023.</li>
+                </ul>
+            </div>
+            <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+                <h3>Intern, Wipro</h3>
+                <p class="experience-duration">June 2022 - August 2022</p>
+                <ul>
+                    <li>Created standardized framework for Machine Learning and optimized workflow for business solutioning in MLOps by creating scalable and modular code.</li>
+                    <li>Enabled efficient training, testing, and visualization of machine learning models.</li>
+                    <li>Developed comprehensive documentation for the entire ML workflow, assisting new joiners.</li>
+                    <li>Reduced knowledge transfer (KT) time from 2 weeks to 4 days.</li>
+                </ul>
+            </div>
+        </section>
 
-    <footer>
-        <button id="download-resume">Download PDF</button>
+        <section id="publications" data-aos="fade-left">
+            <h2>Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-card" data-aos="fade-up">
+                    <h3>Empirical Analysis of Prompt-Based LLMs for Structural Classification of Indian Legal Judgements</h3>
+                    <p class="publication-date">January 2025</p>
+                    <a href="https://www.researchgate.net/publication/390900853_Empirical_Analysis_of_Prompt-Based_LLMs_for_Structural_Classification_of_Indian_Legal_Judgements" target="_blank" class="publication-link">View Publication</a>
+                </div>
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Automated Extraction from Aerospace Engineering Diagrams Using Computer Vision Techniques</h3>
+                    <p class="publication-date">October 2024</p>
+                    <a href="https://www.researchgate.net/publication/385819632_Automated_Extraction_from_Aerospace_Engineering_Diagrams_Using_Computer_Vision_Techniques" target="_blank" class="publication-link">View Publication</a>
+                </div>
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Automation of Text Summarization Using Hugging Face NLP</h3>
+                    <p class="publication-date">May 2024</p>
+                    <a href="https://www.researchgate.net/publication/382617118_Automation_of_Text_Summarization_Using_Hugging_Face_NLP" target="_blank" class="publication-link">View Publication</a>
+                </div>
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Detection of Pneumonia in Chest X-Ray Using Ensemble Learners and Transfer Learning with Deep Learning Models</h3>
+                    <p class="publication-date">July 2023</p>
+                    <a href="https://www.researchgate.net/publication/375884672_Detection_of_Pneumonia_in_Chest_X-Ray_Using_Ensemble_Learners_and_Transfer_Learning_with_Deep_Learning_Models" target="_blank" class="publication-link">View Publication</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" data-aos="fade-left">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="flip-left">
+                    <h3>Structural Analysis of Indian Legal Judgments</h3>
+                    <p>Groundbreaking research with <strong>India Kanoon</strong> to automate judgement tagging using ML/DL & Transformers. Executed over <strong>250 experiments</strong>, achieving an <strong>87% F1-Score</strong>. Resulted in one Q1 journal paper and two international conference papers.</p>
+                </div>
+                <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+                    <h3>Automation of Text Summarization</h3>
+                    <p>Developed a system for extractive text summarization using Hugging Face NLP. Published in INCET 2024.</p>
+                </div>
+                <div class="project-card" data-aos="flip-left" data-aos-delay="300">
+                    <h3>Stock Screener</h3>
+                    <p>A Python-based tool for screening stocks based on technical and fundamental indicators. Features data visualization, filtering, and integration with financial APIs.</p>
+                    <a href="https://github.com/Hemanthbysani/Stock_screener" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card" data-aos="flip-left" data-aos-delay="400">
+                    <h3>LLM Menu</h3>
+                    <p>An AI-powered menu generator using Large Language Models (LLMs) to create dynamic, context-aware menus for applications. Designed for flexibility and easy integration.</p>
+                    <a href="https://github.com/Hemanthbysani/llmmenu" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" data-aos="fade-right">
+            <h2>Notable Achievements</h2>
+            <ul class="achievements-list">
+                <li data-aos="fade-right" data-aos-delay="0">Published paper: "Automation of Text Summarization using Hugging Face NLP" (INCET 2024).</li>
+                <li data-aos="fade-right" data-aos-delay="50">Ranked among top <strong>3%</strong> in class (Curriculum & Extra Curriculum).</li>
+                <li data-aos="fade-right" data-aos-delay="100">Sainya Ranakshetram finalist; TrollCAT CTF <strong>5th</strong> (FY 2020-2022).</li>
+                <li data-aos="fade-right" data-aos-delay="150">Multiple CTF Rankings: Inctf (12th), wtfctf (4th), Tamil CTF (9th), NITECTF (15th).</li>
+                <li data-aos="fade-right" data-aos-delay="200">TCS Techbytes: 2nd place (regional tech competition).</li>
+                <li data-aos="fade-right" data-aos-delay="250">NASA Ames Space Settlement winner.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <p data-aos="fade-up">Let's connect and build something amazing!</p>
+        <p data-aos="fade-up" data-aos-delay="100">
+            <a href="mailto:hemanthbysani2002@gmail.com">hemanthbysani2002@gmail.com</a> | 
+            <a href="https://www.linkedin.com/in/hemanth-bysani/" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/Hemanthbysani" target="_blank">GitHub</a>
+        </p>
+        <button id="download-resume" data-aos="zoom-in" data-aos-delay="200">Download Resume (PDF)</button>
+        <p class="copyright" data-aos="fade-up" data-aos-delay="300">&copy; <span id="current-year"></span> Hemanth Bysani. Inspired by Dennis Snellenberg.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

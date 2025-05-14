@@ -1,62 +1,531 @@
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #1a1a1a; /* Dark grey / Almost black */
+    --secondary-color: #f0f0f0; /* Light grey */
+    --accent-color: #000000; /* A vibrant blue, can be changed */
+    --text-color: #333;
+    --background-color: #ffffff;
+    --card-background: #f9f9f9;
+    --border-radius: 8px;
+    --transition-speed: 0.3s ease;
 }
 
-header {
+body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* header {
     position: relative;
     text-align: center;
     color: #0000FF;
-}
+} */
 
-.parallax-background {
+/* .parallax-background {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('image.jpg'); /* Replace with your image */
+    background-image: url('image1.JPG'); 
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     opacity: 0.7;
-}
+} */
 
 h1, h2 {
     margin: 0.8em 0;
 }
 
-section {
-    padding: 20px;
-    background: #fff;
-    margin: 20px 0;
-}
-
-footer {
+.hero {
+    background: var(--primary-color); /* Fallback color */
+    background-image: url('image1.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    color: var(--secondary-color);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background: #333;
-    padding: 20px 0;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+.hero h1 {
+    font-size: 15vw; /* Even larger and responsive */
+    font-family: 'Montserrat', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.12em;
+    color: #fff;
+    opacity: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: hero-roll 12s linear infinite;
+    will-change: transform;
+    /* Edge highlight effect */
+    -webkit-text-stroke: 2px #fff;
+    color: rgba(255,255,255,0.08); /* Almost transparent inside */
+}
+
+@keyframes hero-roll {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+.hero .tagline {
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 1em;
+    color: var(--secondary-color);
+    opacity: 0.8;
+    letter-spacing: 0.08em;
+    font-family: 'Montserrat', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.hero .location-contact {
+    font-size: 1.0rem;
+    color: var(--secondary-color);
+    opacity: 0.8;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-family: 'Montserrat', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.hero .location-contact a {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+    opacity: 0.95;
+}
+
+.hero .location-contact a:hover {
+    color: #fff;
+}
+
+.main-nav {
+    background-color: var(--primary-color);
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    font-weight: 500;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    border-radius: var(--border-radius);
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Subtle shadow for sections */
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1em;
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 0.5em auto 0;
+    border-radius: 2px;
+}
+
+section h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 0.8em;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+}
+
+section ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+section ul li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+section ul li::before {
+    content: '\2022'; /* Bullet (•) or choose another Unicode icon */
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 2em;
+}
+
+.skill-category {
+    background: var(--card-background);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.skill-category h4 {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-bottom: 0.8em;
+}
+
+/* Experience Section */
+.experience-item {
+    background: var(--card-background);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform var(--transition-speed), box-shadow var (--transition-speed);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.experience-item h3 {
+    margin-bottom: 0.3em;
+}
+
+.experience-duration {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.8em;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2em;
+}
+
+.project-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-speed) box-shadow var(--transition-speed);
+    overflow: hidden; /* For 3D effect on hover */
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) perspective(1000px) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5em;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: auto; /* Pushes link to bottom */
+    padding: 10px 18px;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed);
+    text-align: center;
+}
+
+.project-link:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Achievements Section */
+.achievements-list li {
+    background: var(--card-background);
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.achievements-list li:hover {
+    transform: translateX(5px) scale(1.01);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.achievements-list li::before {
+    content: '\1F3C6'; /* Trophy icon */
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin-bottom: 1em;
+    font-size: 1.1rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+#download-resume {
+    padding: 12px 25px;
+    background-color: var(--accent-color);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    margin-top: 1em;
 }
 
-button:hover {
-    background-color: #0056b3;
+#download-resume:hover {
+    background-color: darken(var(--accent-color), 10%);
+    transform: scale(1.05);
 }
 
-/* AOS Animations */
+copyright {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 2em;
+}
+
+/* AOS Animations - ensure AOS is initialized in script.js */
 [data-aos] {
-    transition: all 0.6s ease-in-out;
+    transition-property: transform, opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+
+/* Preloader Overlay Styles */
+#preloader-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #b2b2b2; /* Ash color */
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#preloader-overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.greetings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    height: 200px;
+    overflow: hidden;
+    min-width: 250px;
+}
+.greeting {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.6s;
+    white-space: nowrap;
+}
+.greeting.active {
+    opacity: 1;
+    position: relative;
+    animation: greeting-in 0.6s;
+}
+@keyframes greeting-in {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll Down Button Styles */
+#scroll-down-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.7);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50px;
+    padding: 18px 38px;
+    font-size: 1.2rem;
+    font-family: 'Inter', 'Montserrat', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    cursor: pointer;
+    z-index: 10;
+    outline: none;
+    opacity: 0.92;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    animation: bounce 1.2s infinite;
+}
+#scroll-down-btn:hover {
+    background: #fff;
+    color: #0077ff;
+    transform: translateX(-50%) scale(1.07);
+}
+#scroll-down-btn .arrow {
+    font-size: 1.5em;
+    margin-left: 0.2em;
+    animation: arrow-bounce 1.2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-18px); }
+}
+@keyframes arrow-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(7px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero .tagline {
+        font-size: 1.2rem;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* 3D-ish effects for cards - can be enhanced with JS for mouse interaction */
+.project-card,
+.skill-category,
+.experience-item {
+    will-change: transform; /* Performance hint */
 }
