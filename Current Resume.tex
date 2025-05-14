@@ -1,0 +1,180 @@
+\documentclass[a4paper,10 pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\titlespacing*{\section} {0pt}{1ex}{2ex}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.75in}
+% \addtolength{\footskip}{-0.1in}
+\addtolength{\hoffset}{-0.1in}
+% \addtolength{\bottommargin}{-0.75in}
+\addtolength{\textheight}{1in}
+% \usepackage[bottom=0.12in]{geometry}
+% \addtolength{\paperwidth}{-0.5in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\fontsize{80in}{40pt}\selectfont Hemanth Bysani}} & 
+    Email : \href{mailto:hemanthbysani2002@gmail.com}{hemanthbysani2002@gmail.com}\\
+  Location: Bangalore, Karnataka, India \\
+
+  \href{https://www.linkedIn.com/in/hemanth-bysani/}{Linkedin: https://www.linkedin.com/in/hemanth-bysani/} & Mobile : +91 8618107187 \\
+  \href{https://github.com/Hemanthbysani}{GitHub: https://github.com/Hemanthbysani} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\large Amrita Vishwa Vidyapeetham}{Bangalore, India}
+      {\textbf{Computer Science and Engineering};  \textbf{CGPA: \large 9.00}}{Aug 2020 - Aug 2024}
+      
+{ \vspace{0.7 em} \textit{Leadership Experience: \textbf{Harvard ACONF24 Delegate, FACE Vice President, GeeksForGeeks Chapter Lead}}}
+	    
+    \resumeSubheading
+      {\large Narayana CO Kaveri Bhavan}{Bangalore, India}
+      {State Board 12th: 85.3\%, JEE Mains \textbf{96\%}}{Aug 2018 - March 2020}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages: }{(Proficient) \textbf{Python, Java, SQL} (Familiar) \textbf{Javascript, Typescript, C/C++}}
+	\resumeSubItem{Tools: }{\textbf{Tensorflow, Keras, PyTorch, OpenCV, Pandas, Ollama, LlamaIndex(GE Aerospace \& Wipro) \\ SpringBoot, Maven, Marklogic, Node.js, JIRA, MYSQL, Postman, Selenium (PayPal, Northern Trust)}}
+\resumeSubHeadingListEnd
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {\large PayPal}{Chennai, India}
+    {SDE-1}{Oct 2024 - Present}
+    \resumeItemListStart
+     \resumeItem{}
+     {Led Java 17 migration for a high-risk billing and payments service which processes \textbf{670 million} requests/week, critical to PayPal’s \textbf{80\%} revenue and optimized application performance, reducing latency, increasing TPS throughput while implementing memory improvements.}
+     \resumeItem{}{Developed a pair programming assistant using state-of-the-art open-source LLMs and tools, enhancing developer efficiency and productivity.}.
+     \resumeItem{}{Part of latest GENAi capabilities at PayPal enabling developers and customers fully utilize the potential of smart Agentic LLMs. Working on utilizing reasoning models for developer enablement.}
+     \resumeItem{}{}
+     \resumeItemListEnd
+    \resumeSubheading
+    {\large General Electric Aerospace}{Bangalore, India}
+    {Data Science DT Intern}{Jan 2024 -  June 2024}
+    \resumeItemListStart
+          \resumeItem{}
+          {Part of LEAP-Image Analytics team. 
+            Helped in achieving \textbf{92+\%} accuracy in terms of F1-Scores and Precision metrics of Segmentation based models. Created SOTA classifier model which performed with an accuracy of \textbf{94.4\%} F1 Score on validation.Devised a method to accurately quantify Crack detection in aircraft blades which led to lower TAT in maintenance.}
+      \resumeItemListEnd
+    \resumeSubheading
+    {\large Northern Trust}{Bangalore, India}
+    {SDE Intern}{June 2023 - September 2023}
+    \resumeItemListStart
+        \resumeItem{}
+        {Created dashboard component which helped reduce TAT of archive retrieval of legacy transactions from \textbf{5+} days to under \textbf{15} seconds which helped in increased productivity of TAM. Implemented search logic based on requirements and focused on reducing latency of searches, increasing reliability and security of dashboard.}
+       \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeSubItem{\large Structural Analysis of Indian Legal Judgments Using Various Machine Learning, Deep Learning, and Transformers }{}
+\resumeItemListStart
+\resumeItem{}{Conducted groundbreaking research in the legal domain in collaboration with \textbf{India Kanoon}, aiming to automate judgement tagging in Indian court cases, thereby significantly enhancing the efficiency of the Indian Legal System.}
+\resumeItem{}{Executed an extensive series of over \textbf{250} experiments encompassing a wide range of Machine Learning, Deep Learning, and Transformer-based models (both generative and transformer variants), employing various advanced techniques.}
+\resumeItem{}{Achieved an unprecedented \textbf{87\%} F1-Score using transformer-based LLMs for the structural analysis of legal documents with 15 unique classes, setting a new benchmark in this domain.}
+\resumeItem{}{This research is part of a comprehensive three-part publication series, resulting in one Q1 journal paper and two international conference papers, underscoring its academic and practical significance.}
+\resumeItemListEnd
+
+\resumeSubItem{\large Pneumonia Detection Research using Chest X-ray based on Ensemble Learners \href{https://ieeexplore.ieee.org/document/10307035/}{(Link)}}{}
+\resumeItemListStart
+\resumeItem{}{Researched the efficiency of using ensemble learners with deep learning , employing transfer learning for pneumonia detection in chest X-ray images.}
+\resumeItem{}{Published in \textbf{ICCCNT14} international conference held at IIT-Delhi, India in July 2023.}
+\resumeItem{}{Achieved an F1 Score of over \textbf{89.5\%} on validation data of approximately 1500 images with a high AUC score of \textbf{98.4\%}.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------Awards-----------------
+\section{Achievements}
+\begin{description}[font=$\bullet$]
+\setlength{\itemsep}{-1pt}
+\item {Published a paper titled \textbf{Automation of Text Summarization using Hugging Face NLP} in the conference INCET 2024}
+\item { Ranked among top \textbf{3\%} in my class based on Curriculum and Extra Curriculum activities }
+\item{ Sainya Ranakshetram finalist, TrollCAT CTF \textbf{5th} position FY 2020-2022}
+\item{Ranked 12th position in Inctf competition, 4th position in wtfctf, 9th position in Tamil CTF and 15th position in NITECTF}
+\item { Finished 2nd place in TCS Techbytes regional tech competition with cash prize as reward}
+\item {NASA Ames Space Settlement winner}
+\scalebox{.1}{\textcolor{white}{IIT, NIT, BITS, IIM, Stanford, Harvard, Yale, transgender, pride}}
+\end{description}
+%-------------------------------------------
+\end{document}
